@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2b2420"/>
+      <stop offset="55%" stop-color="#17140f"/>
+      <stop offset="100%" stop-color="#0b0b0d"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="78%" cy="18%" r="40%">
+      <stop offset="0%" stop-color="#f2c230" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#f2c230" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mnt1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a342c"/>
+      <stop offset="100%" stop-color="#1c1915"/>
+    </linearGradient>
+    <linearGradient id="mnt2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a2621"/>
+      <stop offset="100%" stop-color="#14120f"/>
+    </linearGradient>
+    <linearGradient id="figGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f0e0c"/>
+      <stop offset="100%" stop-color="#050504"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1800" height="900" fill="url(#sky)"/>
+  <rect width="1800" height="900" fill="url(#sun)"/>
+
+  <!-- distant mountains -->
+  <path d="M0,560 L220,380 L420,520 L640,330 L860,500 L1060,360 L1300,520 L1520,400 L1800,540 L1800,900 L0,900 Z" fill="url(#mnt2)" opacity="0.8"/>
+  <path d="M0,640 L260,460 L520,600 L780,440 L1040,610 L1320,470 L1560,600 L1800,500 L1800,900 L0,900 Z" fill="url(#mnt1)"/>
+
+  <!-- cross silhouette -->
+  <g opacity="0.55">
+    <rect x="1215" y="120" width="14" height="190" fill="#1f1c17"/>
+    <rect x="1168" y="168" width="108" height="14" fill="#1f1c17"/>
+  </g>
+
+  <!-- ground -->
+  <path d="M0,720 Q450,660 900,710 T1800,700 L1800,900 L0,900 Z" fill="#100f0d"/>
+
+  <!-- walking figures silhouette (students) -->
+  <g fill="url(#figGrad)">
+    <ellipse cx="330" cy="560" rx="46" ry="64" />
+    <circle cx="330" cy="470" r="30"/>
+    <rect x="300" y="600" width="24" height="120" rx="10"/>
+    <rect x="340" y="600" width="24" height="120" rx="10"/>
+
+    <ellipse cx="470" cy="580" rx="50" ry="70" />
+    <circle cx="470" cy="482" r="32"/>
+    <rect x="438" y="624" width="26" height="130" rx="10"/>
+    <rect x="482" y="624" width="26" height="130" rx="10"/>
+
+    <ellipse cx="610" cy="565" rx="44" ry="62" />
+    <circle cx="610" cy="476" r="29"/>
+    <rect x="582" y="602" width="22" height="118" rx="10"/>
+    <rect x="620" y="602" width="22" height="118" rx="10"/>
+  </g>
+
+  <!-- soft vignette strip at bottom for text legibility already handled by CSS gradient -->
+  <rect width="1800" height="900" fill="#0b0b0d" opacity="0.08"/>
+</svg>
