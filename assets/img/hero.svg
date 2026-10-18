@@ -1,62 +1,80 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 900" preserveAspectRatio="xMidYMid slice">
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2b2420"/>
-      <stop offset="55%" stop-color="#17140f"/>
-      <stop offset="100%" stop-color="#0b0b0d"/>
+      <stop offset="0%" stop-color="#8a6a3a"/>
+      <stop offset="35%" stop-color="#4f3a26"/>
+      <stop offset="70%" stop-color="#241b14"/>
+      <stop offset="100%" stop-color="#0b0a08"/>
     </linearGradient>
-    <radialGradient id="sun" cx="78%" cy="18%" r="40%">
-      <stop offset="0%" stop-color="#f2c230" stop-opacity="0.55"/>
+    <radialGradient id="sun" cx="52%" cy="30%" r="42%">
+      <stop offset="0%" stop-color="#ffd98a" stop-opacity="0.95"/>
+      <stop offset="45%" stop-color="#f2c230" stop-opacity="0.35"/>
       <stop offset="100%" stop-color="#f2c230" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="mnt1" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#3a342c"/>
-      <stop offset="100%" stop-color="#1c1915"/>
-    </linearGradient>
-    <linearGradient id="mnt2" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2a2621"/>
-      <stop offset="100%" stop-color="#14120f"/>
+    <linearGradient id="towerGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b2e20"/>
+      <stop offset="100%" stop-color="#17120c"/>
     </linearGradient>
     <linearGradient id="figGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#0f0e0c"/>
-      <stop offset="100%" stop-color="#050504"/>
+      <stop offset="0%" stop-color="#130f0a"/>
+      <stop offset="100%" stop-color="#030302"/>
     </linearGradient>
   </defs>
 
   <rect width="1800" height="900" fill="url(#sky)"/>
-  <rect width="1800" height="900" fill="url(#sun)"/>
+  <circle cx="940" cy="270" r="320" fill="url(#sun)"/>
 
-  <!-- distant mountains -->
-  <path d="M0,560 L220,380 L420,520 L640,330 L860,500 L1060,360 L1300,520 L1520,400 L1800,540 L1800,900 L0,900 Z" fill="url(#mnt2)" opacity="0.8"/>
-  <path d="M0,640 L260,460 L520,600 L780,440 L1040,610 L1320,470 L1560,600 L1800,500 L1800,900 L0,900 Z" fill="url(#mnt1)"/>
+  <!-- clouds -->
+  <g fill="#fff" opacity="0.08">
+    <ellipse cx="300" cy="160" rx="160" ry="26"/>
+    <ellipse cx="1500" cy="130" rx="200" ry="30"/>
+    <ellipse cx="1150" cy="90" rx="120" ry="18"/>
+  </g>
 
-  <!-- cross silhouette -->
-  <g opacity="0.55">
-    <rect x="1215" y="120" width="14" height="190" fill="#1f1c17"/>
-    <rect x="1168" y="168" width="108" height="14" fill="#1f1c17"/>
+  <!-- cathedral silhouette -->
+  <g fill="url(#towerGrad)">
+    <!-- left tower -->
+    <rect x="560" y="260" width="110" height="430" />
+    <path d="M560 260 L615 150 L670 260 Z"/>
+    <rect x="590" y="330" width="18" height="60" fill="#0b0906"/>
+    <rect x="622" y="330" width="18" height="60" fill="#0b0906"/>
+    <!-- right tower -->
+    <rect x="1110" y="260" width="110" height="430"/>
+    <path d="M1110 260 L1165 150 L1220 260 Z"/>
+    <rect x="1140" y="330" width="18" height="60" fill="#0b0906"/>
+    <rect x="1172" y="330" width="18" height="60" fill="#0b0906"/>
+    <!-- central facade -->
+    <path d="M670 690 L670 330 Q900 180 1110 330 L1110 690 Z"/>
+    <!-- rose window -->
+    <circle cx="890" cy="360" r="46" fill="#1d1711" opacity="0.9"/>
+    <!-- arched door -->
+    <path d="M840 690 L840 560 Q890 500 940 560 L940 690 Z" fill="#0a0806"/>
+  </g>
+
+  <!-- cross on top -->
+  <g fill="#120d08">
+    <rect x="884" y="70" width="12" height="110"/>
+    <rect x="852" y="104" width="76" height="12"/>
   </g>
 
   <!-- ground -->
-  <path d="M0,720 Q450,660 900,710 T1800,700 L1800,900 L0,900 Z" fill="#100f0d"/>
+  <path d="M0,720 Q450,670 900,710 T1800,700 L1800,900 L0,900 Z" fill="#0a0906"/>
 
-  <!-- walking figures silhouette (students) -->
+  <!-- walking students silhouette, foreground -->
   <g fill="url(#figGrad)">
-    <ellipse cx="330" cy="560" rx="46" ry="64" />
-    <circle cx="330" cy="470" r="30"/>
-    <rect x="300" y="600" width="24" height="120" rx="10"/>
-    <rect x="340" y="600" width="24" height="120" rx="10"/>
-
-    <ellipse cx="470" cy="580" rx="50" ry="70" />
-    <circle cx="470" cy="482" r="32"/>
-    <rect x="438" y="624" width="26" height="130" rx="10"/>
-    <rect x="482" y="624" width="26" height="130" rx="10"/>
-
-    <ellipse cx="610" cy="565" rx="44" ry="62" />
-    <circle cx="610" cy="476" r="29"/>
-    <rect x="582" y="602" width="22" height="118" rx="10"/>
-    <rect x="620" y="602" width="22" height="118" rx="10"/>
+    <!-- figure 1 -->
+    <circle cx="300" cy="560" r="34"/>
+    <path d="M250 760 Q250 630 300 610 Q350 630 352 760 Z"/>
+    <!-- figure 2 -->
+    <circle cx="470" cy="540" r="38"/>
+    <path d="M410 780 Q412 600 470 580 Q530 600 534 780 Z"/>
+    <rect x="500" y="640" width="46" height="90" rx="14"/>
+    <!-- figure 3 (main, taller, with backpack + books) -->
+    <circle cx="700" cy="500" r="44"/>
+    <path d="M628 800 Q630 580 700 555 Q772 580 776 800 Z"/>
+    <rect x="735" y="620" width="58" height="110" rx="16"/>
+    <rect x="690" y="700" width="90" height="56" rx="8" fill="#1d1812"/>
   </g>
 
-  <!-- soft vignette strip at bottom for text legibility already handled by CSS gradient -->
-  <rect width="1800" height="900" fill="#0b0b0d" opacity="0.08"/>
+  <rect width="1800" height="900" fill="#0b0b0d" opacity="0.04"/>
 </svg>
